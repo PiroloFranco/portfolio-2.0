@@ -11,7 +11,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    color: #1E2A38;
+    color: var(--primary-color);
 }
 
 section {
@@ -28,6 +28,9 @@ h1, h2, h3, h4 {
     color: #2C3E50;
 }
 
+h3 {
+    text-align: center;
+}
 nav{
     padding: 25px;
 }
@@ -74,7 +77,35 @@ li {
     list-style: none;
 }
 
-
-h3 {
-    text-align: center;
+/*Inicia el grid para los iconos */
+.tech-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
 }
+
+.tech-hijo{
+    background-color: transparent;
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-hijo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tech-card img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0.5rem;
+}
+
+.tech-hijo p {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+
+/*Finaliza el grid para los iconos */
