@@ -7,6 +7,11 @@ body {
     color: #333;
 }
 
+section {
+    margin: 60px 0;
+    padding: 20px;
+}
+
 h1, h2, h3, h4 {
     color: #2C3E50;
 }
@@ -15,6 +20,34 @@ nav ul {
     display: flex; justify-content: space-around; 
     list-style: none;
 }
+ /* Animacion del Hover */
+nav ul li a {
+    position: relative;
+    color: #2C3E50;
+    text-decoration: none;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #2C3E50;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3a6c9e;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+ /* Termina Animacion del Hover */
 
 a{
     color: #2C3E50;
