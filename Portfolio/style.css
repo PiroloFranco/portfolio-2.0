@@ -1,10 +1,17 @@
+:root {
+    --primary-color: #1E2A38; /* color base / dominante */
+    --secondary-color: #4FD1C5; /* color acento / contraste */
+}
 * {
-    box-sizing: border-box; /* Comúnmente usado para el modelo de caja */
+    box-sizing: border-box; 
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     font-family: 'Inter', sans-serif;
-    color: #333;
+    color: #1E2A38;
 }
 
 section {
@@ -12,12 +19,21 @@ section {
     padding: 20px;
 }
 
+header{
+    background-color: yellow;
+}
+
 h1, h2, h3, h4 {
+    padding: 5px;
     color: #2C3E50;
 }
 
+nav{
+    padding: 25px;
+}
 nav ul {
-    display: flex; justify-content: space-around; 
+    display: flex; 
+    justify-content: space-around; 
     list-style: none;
 }
  /* Animacion del Hover */
@@ -36,12 +52,12 @@ nav ul li a::after {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #2C3E50;
+    background-color: #4FD1C5;
     transition: width 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #3a6c9e;
+    color: #2C3E50;
 }
 
 nav ul li a:hover::after {
