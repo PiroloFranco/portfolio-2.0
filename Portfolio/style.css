@@ -25,7 +25,7 @@ header{
 
 h1, h2, h3, h4 {
     padding: 5px;
-    color: #2C3E50;
+    color: var(--primary-color);
 }
 
 h3 {
@@ -42,7 +42,7 @@ nav ul {
  /* Animacion del Hover */
 nav ul li a {
     position: relative;
-    color: #2C3E50;
+    color: var(--primary-color);
     text-decoration: none;
     padding: 5px 0;
     transition: color 0.3s ease;
@@ -60,7 +60,7 @@ nav ul li a::after {
 }
 
 nav ul li a:hover {
-    color: #2C3E50;
+    color: var(--primary-color);
 }
 
 nav ul li a:hover::after {
@@ -69,7 +69,7 @@ nav ul li a:hover::after {
  /* Termina Animacion del Hover */
 
 a{
-    color: #2C3E50;
+    color: var(--primary-color);
     text-decoration: none;
 }
 
@@ -78,14 +78,16 @@ li {
 }
 
 /*Inicia el grid para los iconos */
-.tech-grid{
+.tech-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
 }
 
 .tech-hijo{
     background-color: transparent;
+    width: 6rem;
+    height: 6rem;
     border-radius: 12px;
     padding: 1rem;
     text-align: center;
@@ -94,13 +96,11 @@ li {
 
 .tech-hijo:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px var(--secondary-color);
 }
 
-.tech-card img {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 0.5rem;
+.tech-hijo img{
+    margin-bottom: 1rem;
 }
 
 .tech-hijo p {
@@ -109,3 +109,7 @@ li {
 }
 
 /*Finaliza el grid para los iconos */
+
+#imagenes-contacto{
+    width: 1rem;
+}
