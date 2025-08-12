@@ -8,6 +8,10 @@
     margin: 0;
     padding: 0;
 }
+/* para una mejora visual del scroll*/
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: 'Inter', sans-serif;
@@ -77,39 +81,46 @@ li {
     list-style: none;
 }
 
-/*Inicia el grid para los iconos */
+/* Estilos para la sección de tecnologías */
 .tech-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
 }
 
-.tech-hijo{
+.tech-hijo {
     background-color: transparent;
-    width: 6rem;
-    height: 6rem;
     border-radius: 12px;
-    padding: 1rem;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease;
+    padding: 1rem; /* Padding para el espacio del box-shadow */
 }
 
 .tech-hijo:hover {
-    transform: scale(1.05);
     box-shadow: 0 4px 12px var(--secondary-color);
 }
 
-.tech-hijo img{
-    margin-bottom: 1rem;
+.tech-hijo-img img {
+    width: 6rem;
+    height: 6rem;
+    object-fit: contain;
+    transition: transform 0.3s ease; /* Transición para la imagen */
+}
+
+.tech-hijo:hover .tech-hijo-img img {
+    transform: scale(1.1);
 }
 
 .tech-hijo p {
     font-size: 0.9rem;
     color: var(--primary-color);
+    margin-top: 0;
+    transition: transform 0.3s ease; /* Transición para el texto */
 }
 
-/*Finaliza el grid para los iconos */
-
+.tech-hijo:hover p {
+    transform: scale(1.1);
+}
 #imagenes-contacto{
     width: 1rem;
 }
